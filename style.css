@@ -1,30 +1,35 @@
+/* Reset básico: remove margens/paddings padrão e facilita cálculos de largura */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos globais do body */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #89CFF0, #fff);
+  background: linear-gradient(to bottom, #89CFF0, #fff); /* degrade do céu azul para branco */
   color: #333;
 }
 
+/* Barra de navegação */
 .navbar {
   display: flex;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(8px);
+  justify-content: center; /* centraliza os itens */
+  background: rgba(255, 255, 255, 0.3); /* fundo semitransparente */
+  backdrop-filter: blur(8px); /* efeito de vidro fosco */
   padding: 1rem;
 }
 
+/* Lista de itens da navbar */
 .navbar ul {
   display: flex;
-  gap: 2rem;
-  list-style: none;
+  gap: 2rem; /* espaçamento entre os itens */
+  list-style: none; /* remove marcadores */
 }
 
-.hero {
+/* Caixa de texto (campo de busca) */
+.caixa-texto {
   text-align: center;
   padding: 4rem 2rem;
 }

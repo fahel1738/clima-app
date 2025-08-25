@@ -3,32 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clima App</title>
+  <title>Meteora</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Barra de navegação principal -->
   <nav class="navbar">
     <ul>
-      <li>Início</li>
-      <li>Previsão</li>
-      <li>Comparar</li>
+      <!-- Links do menu -->
+      <li>Buscar</li>
+      <li>Próximos 7 Dias</li>
+      <li>Compativos</li>
       <li>Notícias</li>
     </ul>
   </nav>
 
-  <header class="hero">
-    <h1>Bem-vindo ao Clima App</h1>
+  <!-- Caixa de busca (campo de texto + botão) -->
+  <header class="caixa-texto">
     <input type="text" placeholder="Pesquise uma cidade...">
     <button>Buscar</button>
   </header>
 
+  <!-- Conteúdo principal da aplicação -->
   <main>
+    <!-- Seção: clima atual da cidade pesquisada -->
     <section id="clima-atual">Clima atual aparecerá aqui</section>
+
+    <!-- Seção: comparativo de clima entre períodos -->
     <section id="comparacao">Comparar clima</section>
+
+    <!-- Seção: previsão estendida para 7 dias -->
     <section id="previsao">Previsão 7 dias</section>
+
+    <!-- Seção: notícias relacionadas ao clima -->
     <section id="noticias">Notícias</section>
   </main>
 
+  <!-- Arquivo JavaScript com a lógica da aplicação -->
   <script src="script.js"></script>
 </body>
 </html>

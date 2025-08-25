@@ -1,30 +1,26 @@
-# 🌤️ Clima App
+# Meteora ☁️⚡
 
-Aplicação web para consultar informações climáticas em tempo real.  
-O usuário pode pesquisar por cidade/local e visualizar dados como:
-- Temperatura atual
-- Sensação térmica
-- Vento
-- Umidade
-- Chance de chuva
-- Previsão para os próximos 7 dias
-- Comparativo climático em períodos diferentes
-- Notícias relacionadas ao clima
+**Meteora** é um aplicativo web moderno de previsão do tempo que traz informações completas sobre o clima de qualquer cidade do mundo.  
+A proposta é oferecer uma experiência visual imersiva, com fundos dinâmicos que se adaptam ao clima e horário local, além de comparações de períodos e notícias relacionadas.
 
-## 🚀 Tecnologias
+## Funcionalidades 🌍
+- Pesquisa de cidade e exibição de:
+  - Temperatura atual
+  - Sensação térmica
+  - Precipitação e chance de chuva
+  - Velocidade do vento
+  - Outras informações climáticas relevantes
+- Previsão estendida de 7 dias
+- Comparativo climático entre períodos
+- Aba de notícias meteorológicas
+- Interface responsiva para todos os dispositivos
+- Futuramente: integração com IA para curiosidades e histórico climático  
+
+## Tecnologias 🚀
 - HTML5
 - CSS3
-- JavaScript
-- API de Clima (ex: OpenWeather ou AccuWeather)
+- JavaScript (ES6+)
+- API de Clima (OpenWeather ou similar)
 
-## 📱 Responsividade
-O projeto foi desenvolvido para se adaptar automaticamente a diferentes dispositivos (PC, tablet e celular).
-
-## 🔮 Funcionalidade Extra (IA)
-Integração futura com IA para responder perguntas sobre clima, curiosidades e histórico meteorológico.
-
-## 📌 Status
-Em desenvolvimento 🚧
-
-## 👤 Autor
-Rafael Souza
+## Objetivo 🎯
+Criar uma aplicação responsiva e intuitiva que vá além da previsão básica do tempo, trazendo insights e curiosidades de forma interativa.
