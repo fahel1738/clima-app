@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meteora</title>
+  <link rel="preconnect" href="https://api.open-meteo.com">
+  <link rel="preconnect" href="https://geocoding-api.open-meteo.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="weather-clear day">
+  <div class="background-stage" aria-hidden="true">
+    <video id="weather-video" muted loop playsinline preload="metadata"></video>
+    <div class="media-fallback"></div>
+    <div class="atmosphere">
+      <span class="orb orb-sun"></span>
+      <span class="orb orb-moon"></span>
+      <span class="cloud cloud-a"></span>
+      <span class="cloud cloud-b"></span>
+      <span class="rain-layer"></span>
+      <span class="snow-layer"></span>
+      <span class="mist-layer"></span>
+      <span class="star-layer"></span>
+    </div>
+    <div class="readability-overlay"></div>
+  </div>
+
+  <div class="app-shell">
+    <nav class="navbar" aria-label="Navega&ccedil;&atilde;o principal">
+      <a class="brand" href="#buscar" aria-label="Meteora">
+        <span class="brand-mark" aria-hidden="true"></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#buscar">Buscar</a></li>
+        <li><a href="#previsao">Pr&oacute;ximos 7 dias</a></li>
+        <li><a href="#comparacao">Comparativos</a></li>
+        <li><a href="#noticias">Not&iacute;cias</a></li>
+      </ul>
+
+      <div class="location-pill" aria-label="Localiza&ccedil;&atilde;o atual">
+        <span class="pin" aria-hidden="true"></span>
+        <span id="nav-location">S&atilde;o Paulo, Brasil</span>
+        <span class="chevron" aria-hidden="true"></span>
+      </div>
+    </nav>
+
+    <header class="hero" id="buscar">
+      <form class="search-panel" id="search-form" autocomplete="off">
+        <label for="city-input">Buscar cidade</label>
+        <div class="search-row">
+          <input id="city-input" name="city" type="search" placeholder="Digite uma cidade..." value="Sao Paulo" aria-autocomplete="list" aria-controls="suggestions-list" aria-expanded="false">
+          <button type="submit">Buscar</button>
+        </div>
+        <div class="suggestions" id="suggestions-list" role="listbox"></div>
+        <p id="status-message" role="status">Pronto para consultar o clima.</p>
+      </form>
+
+      <section class="hero-weather" id="clima-atual" aria-live="polite">
+        <p class="date-line" id="date-line">Hoje</p>
+        <h1 id="city-name">Sao Paulo</h1>
+        <p class="region-line" id="region-line">Sao Paulo, Brasil</p>
+
+        <div class="temperature-cluster">
+          <span id="current-temp">--</span>
+          <sup>&deg;</sup>
+        </div>
+
+        <div class="condition-row">
+          <span class="condition-icon" id="condition-icon" aria-hidden="true"></span>
+          <span id="weather-label">Tempo atual</span>
+        </div>
+
+        <div class="hero-meta">
+          <article>
+            <span>Hor&aacute;rio local</span>
+            <strong id="local-time">--:--</strong>
+          </article>
+          <article>
+            <span>M&iacute;n / M&aacute;x</span>
+            <strong id="temp-range">--&deg; / --&deg;</strong>
+          </article>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="metric-section" aria-label="Informa&ccedil;&otilde;es do clima atual">
+        <div class="metric-grid" id="metric-grid"></div>
+      </section>
+
+      <section class="forecast-section panel-section" id="previsao">
+        <div class="section-heading">
+          <p class="eyebrow">Pr&oacute;ximos dias</p>
+          <h2>Previs&atilde;o de 7 dias</h2>
+        </div>
+        <div class="forecast-grid" id="forecast-grid"></div>
+      </section>
+
+      <section class="insight-layout">
+        <div class="comparison panel-section" id="comparacao">
+          <div class="section-heading">
+            <p class="eyebrow">IA preparada</p>
+            <h2>Comparativos inteligentes</h2>
+          </div>
+          <div class="comparison-list" id="comparison-list"></div>
+        </div>
+
+        <aside class="news-panel panel-section" id="noticias">
+          <div class="section-heading">
+            <p class="eyebrow">Radar</p>
+            <h2>Not&iacute;cias clim&aacute;ticas</h2>
+          </div>
+          <div class="news-list" id="news-list"></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
